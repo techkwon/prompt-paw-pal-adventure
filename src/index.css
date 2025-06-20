@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Gamja+Flower&family=Cute+Font&display=swap');
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
 
@@ -94,30 +94,44 @@
   }
 
   body {
-    @apply bg-gradient-to-br from-blue-200 via-purple-200 to-pink-200 text-foreground;
-    font-family: 'Noto Sans KR', sans-serif;
+    @apply bg-gradient-to-br from-pink-100 via-purple-100 to-blue-100 text-foreground;
+    font-family: 'Gamja Flower', cursive;
+    font-size: 16px;
   }
 
   .pixel-font {
     font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+  }
+
+  .cute-font {
+    font-family: 'Gamja Flower', cursive;
+    font-size: 18px;
+    font-weight: 400;
   }
 
   .retro-button {
-    @apply bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 
-           text-white font-bold py-3 px-6 rounded-lg transform hover:scale-105 
+    @apply bg-gradient-to-r from-pink-400 to-purple-400 hover:from-pink-500 hover:to-purple-500 
+           text-white font-bold py-4 px-8 rounded-2xl transform hover:scale-105 
            transition-all duration-200 shadow-lg hover:shadow-xl;
+    font-family: 'Gamja Flower', cursive;
+    font-size: 18px;
   }
 
   .retro-card {
-    @apply bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border-2 border-purple-300 
+    @apply bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl border-4 border-pink-300 
            hover:border-purple-400 transition-all duration-300;
   }
 
   .mentor-bubble {
-    @apply bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg border-2 border-blue-300
+    @apply bg-gradient-to-r from-yellow-50 to-pink-50 backdrop-blur-sm rounded-3xl p-6 shadow-lg border-4 border-yellow-300
            relative before:content-[''] before:absolute before:bottom-0 before:left-8
-           before:w-0 before:h-0 before:border-l-[15px] before:border-r-[15px] 
-           before:border-t-[15px] before:border-l-transparent before:border-r-transparent
-           before:border-t-blue-300 before:transform before:translate-y-full;
+           before:w-0 before:h-0 before:border-l-[20px] before:border-r-[20px] 
+           before:border-t-[20px] before:border-l-transparent before:border-r-transparent
+           before:border-t-yellow-300 before:transform before:translate-y-full;
+  }
+
+  .score-display {
+    @apply bg-gradient-to-r from-yellow-200 to-orange-200 rounded-full p-6 border-4 border-yellow-400;
   }
 }
